@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 09:14:15 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/28 09:31:03 by mmidon           ###   ########.fr       */
+/*   Created: 2023/02/27 10:13:13 by mmidon            #+#    #+#             */
+/*   Updated: 2023/02/28 09:36:13 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-class Animal
+class Brain
 {
 	public:
-		Animal();
-		Animal(const Animal& cpy);
-		Animal& operator=(const Animal& a);
-		virtual ~Animal();
-		std::string getType() const;
-		void setType(const std::string& type);
-		virtual void makeSound() const;
-	private:
-		std::string type;
+		Brain();
+		Brain(const Brain& cpy);
+		Brain& operator=(const Brain& cpy);
+		~Brain();
+		std::string ideas[100];
 };
-
 
 #endif

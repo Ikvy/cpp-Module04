@@ -1,31 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/24 09:14:15 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/28 09:31:03 by mmidon           ###   ########.fr       */
+/*   Created: 2023/02/24 09:13:23 by mmidon            #+#    #+#             */
+/*   Updated: 2023/02/28 10:15:26 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include <iostream> 
 
-class Animal
+#include "Dog.hpp"
+#include "Cat.hpp"
+
+void leak_test()
 {
-	public:
-		Animal();
-		Animal(const Animal& cpy);
-		Animal& operator=(const Animal& a);
-		virtual ~Animal();
-		std::string getType() const;
-		void setType(const std::string& type);
-		virtual void makeSound() const;
-	private:
-		std::string type;
-};
+	const Cat* a = new Cat();
+	const Cat* b = new Cat();
 
+	delete a;
+	delete b;
+}
 
-#endif
+void random_test()
+{
+	Cat a;
+	Cat b;
+
+	a = b;
+	std::cout << &a << std::endl; 
+	std::cout << &b << std::endl; 
+}
+
+int main()
+{
+	leak_test();
+	std::cout << "\n\n\n\n";
+	random_test();
+//	system("leaks ex02"); 
+	return 0;
+}
