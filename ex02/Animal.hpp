@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 09:14:15 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/28 10:13:47 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/03 16:02:35 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Animal
 		virtual ~Animal();
 		std::string getType() const;
 		void setType(const std::string& type);
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0;
 	private:
 		std::string type;
 	protected:

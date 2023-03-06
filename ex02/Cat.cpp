@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 09:00:43 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/27 14:24:57 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/03 16:07:51 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ Cat::Cat()
 
 Cat::Cat(const Cat& cpy)
 {
-	this->brain = new Brain(*cpy.brain);
+	*this = cpy;
 	std::cout << "Cat copy constructor message" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat& a)
 {
+	this->brain = new Brain(*a.brain);
 	this->setType(a.getType());
 	return (*this);
 }

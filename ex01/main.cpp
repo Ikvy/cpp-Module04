@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 09:13:23 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/28 09:55:28 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/03 15:29:18 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,18 @@ void random_test()
 
 int main()
 {
+	/*
 	subject_test();
 	std::cout << "\n\n\n\n";
 	leak_test();
 	std::cout << "\n\n\n\n";
 	tab_test();
 	std::cout << "\n\n\n\n";
-	random_test();
+	random_test();*/
+	Cat basic;
+	{
+		Cat tmp = basic;
+	}
 //	system("leaks ex01"); 
 	return 0;
 }

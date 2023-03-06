@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/24 09:13:23 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/28 10:15:26 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/03 16:10:02 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ int main()
 	leak_test();
 	std::cout << "\n\n\n\n";
 	random_test();
+	std::cout << "\n\n\n\n";
+	Dog tmp;
+	{
+		Dog tmp2 = tmp;
+	}
 //	system("leaks ex02"); 
 	return 0;
 }

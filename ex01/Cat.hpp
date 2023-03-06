@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 08:59:11 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/27 14:24:45 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/03 15:53:44 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class Cat : public Animal
 		Cat(const Cat& cpy);
 		~Cat();
 		Cat &operator=(const Cat& a);
-		void makeSound() const;
 		Brain *getBrain() const;
 	private:
+		void makeSound() const;
 		Brain *brain;
 };
 
