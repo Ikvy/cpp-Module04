@@ -6,7 +6,7 @@
 /*   By: mmidon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 10:13:13 by mmidon            #+#    #+#             */
-/*   Updated: 2023/02/28 09:36:13 by mmidon           ###   ########.fr       */
+/*   Updated: 2023/03/06 15:36:34 by mmidon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Brain
 		Brain(const Brain& cpy);
 		Brain& operator=(const Brain& cpy);
 		~Brain();
+	private:
 		std::string ideas[100];
 };
 
